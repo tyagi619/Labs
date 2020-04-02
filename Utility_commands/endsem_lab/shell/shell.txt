@@ -1,0 +1,81 @@
+VARIABLE
+	$0 - basename of program as it was called
+	$1..$9 - 9 additional parameters the script was called with
+	$@ - all parameters $1...whatever(preferred over $*)
+	$* - same as $@ but does not preserve any white spaces
+	$# - number of parameters the script was called with
+	$? - exit value of the last run command
+	$$ - PID(Process IDentifier) of currently running shell
+	$! - PID of the last run background process
+	IFS - Internal Field separator(default value in SPACE TAB NEWLINE) 
+
+		#!/bin/sh
+		old_IFS="$IFS"
+		IFS=:
+		echo "Please input some data separated by colons ..."
+		read x y z
+		IFS=$old_IFS
+		echo "x is $x y is $y z is $z"
+
+		$ ./ifs.sh
+		Please input some data separated by colons ...
+		hello:how are you:today (user input)
+		x is hello y is how are you z is today
+
+SCOPE OF VARIABLES
+	by default all varibales have global scope
+
+RETURN VALUE FROM FUNCTION
+	you can return a value from function in 3 ways:
+	1)Echo the value of variable in function
+
+		test(){
+			...
+			...
+			...
+			echo "$var"
+		}
+
+		val=$( test )
+
+	2)Return exit status(only if the variable is a number)
+	
+		test(){
+			...
+			...
+			...
+			return "$var"
+		}	
+
+		test
+		val=$?
+
+	3)Share variable
+	
+		test(){
+			...
+			...
+			...
+			var
+		}	
+
+		$var can be used here since all variables have global scope
+
+CALCULATIONS
+
+	expr - used for calculations
+	expr $var - 1	
+
+READING FROM FILE
+	read -r	LINE - reads the file line by line
+	read -n[num] - reads the file num characters at a time
+	
+
+LENGTH OF STRING
+	len=${#var}	
+
+DECLARE A ARRAY
+	declare -a ARRAYNAME
+	
+DELETE A ARRAY
+	unset ARRAYNAME	

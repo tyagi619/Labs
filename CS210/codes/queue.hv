@@ -1,0 +1,19 @@
+#ifndef QUEUE_H_INCLUDED
+#define QUEUE_H_INCLUDED
+
+void *mk(void);
+
+void *add_start(void *QP,void *elem);
+
+void *add_end(void *QP,void *elem);
+
+void *del_start(void *QP);
+
+void *del_end(void *QP);
+
+void *duplicate(void *QP);
+
+void print(struct queue *QP);
+
+
+#endif

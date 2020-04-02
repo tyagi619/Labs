@@ -1,0 +1,90 @@
+grep -options 'search text' input file
+
+GREP INPUT
+	1-Text file
+	2-Directories
+	3-Stdin
+	4-Sockets/Input from devices
+
+SEARCH TEXT
+	1-Simple Text
+		Eg; 'Apple' , 'america' , 'a'
+
+	2-Regular Exp
+	
+		--> Special character	
+		a) \ - Cancel special meaning. Eg: 'a\.'= a.
+		b)[ ] - Matches any character in the list. Eg: 'a[abc]' = 'aa', 'ab' , 'ac'
+		c)[^ ] - Doesn't match any character in the list. Eg: 'a[^abc]' = 'ad' , 'ae' , 'af' ,....
+		d)[ - ] - Range of character.  Eg: 'a[a-c]' = 'aa' , 'ab' , 'ac'
+		e) ^ - Matches characters at the begining of line
+		f) $ - Matches characters at the end of line
+		g) . - Any single character except end of line
+		h) * - Matches preceding character any number of times. Eg: 'a*' = '' , 'a' , 'aa' , 'aaa' , ...
+		i) \b - matches at word boundaries
+			3 positions that satisfy word boundaries:
+			i)Before the first character of string(it the first character is a word)
+			ii)After the last character of word(if the last character is a word character)
+			iii)Between two characters in a string,where one is a word character and other is not a word character
+		j) \B - matches at non-word boundaries
+		k) \< \> - matches entire word	
+
+		-->Shorthand characters(Use with -P)
+		a) \d - short for [0-9]
+		b) \w - short for [A-Za-z0-9_]
+		c) \s - short for [ \t\r\n\f] (whitespace characters)
+		d) \h - short hand for [ \t]
+
+		Can be used as: [\d\w], [^\d] , '\d\w'
+
+		--> Character classes
+		a)[[:lower:]] - abcde....yz
+		b)[[:upper:]] - ABCDE....YZ
+		c)[[:alpha:]] - AaBbCc....YyZz
+		d)[[:digit:]] - 0123456789
+		e)[[:alnum:]] - [[:aplha:]] + [[:digit:]]
+		f)[[:blank:]] - space or tab
+		g)[[:punct:]] - punctuation character. [!"\#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~]
+		h)[[:xdigit:]] - hexadecimal digits. [A-Fa-f0-9]
+
+	3-Extended Regex[-E]
+		a) ? - Preceding character matched atmost once
+		b) + - Preceding character matched one or more time
+		c) {n} - preceding character matched extactly n times
+		d) {n,} - preceding character matched n or more times
+		e) {n,m} - matched atleast n times and atmost m times
+		f) {,m} - matched atmost m times
+		g) ( ) - Used to group multiple characters
+		h) | - multiple characters. Eg: 'ram|shyam|mohan'
+
+OPTIONS
+	
+	1) Input
+		a) -r - search directories recurrsively
+
+	2) Search Text
+		a) -e - to provide multiple search text
+		b) -G - search text is a basic regex (by default)
+		c) -E - search text is an Extended regex
+		d) -F - search text as Fixed string (No spl character)
+		e) -i - ignore case
+		f) -f - file instead of search text (takes first line of file and matches it with grep input, then goes to next line and so on...)
+		g) -v - invert match
+		h) -w - search string as whole word
+		i) -x - search string as whole line
+
+	3)Output
+		a) -c - Display total no. of matching lines
+		b) -L - Display names of non matching files
+		c) -l - Display names of matching files
+		d) -m n - Stop after n matches
+		e) -o - only output matched part of line
+		f) -q Quit w/o at output
+		g) -A num - Display no. of trailing lines
+		h) -B num - Display no. of leading lines
+		i) -C num - Display no. of trailing and leading lines
+		j) -b - Byte offset(starts from 0)
+		k) -H - Display name of file
+		l) -h - Display without file names
+		m) -n - Prints line number where matching occurs 	
+

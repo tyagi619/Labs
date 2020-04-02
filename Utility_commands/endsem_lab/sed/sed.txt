@@ -1,0 +1,85 @@
+SED
+
+sed [-options] '[line number] s/[old]/[new]/[command]' file
+
+s - Substitute command(Used only when you need to substitue pattern in a file)
+/../../ - Delimiter
+[old] - Regular Expression Pattern Search pattern
+[new] - replacement string
+file - filename
+[line number] - reads only that line (default whole file)
+                                In place of line number you can specify a expression to tell which lines to read.
+
+                                Consider, a.txt :
+                                        This is a beautiful day.
+                                        It is lovely weather outside.
+
+                                        sed -r '/Weather/I s/is/was/g' a.txt
+
+OPTIONS
+        -n - Does not print anything unless an explicit request to print is madecd
+        -e - allows multiple commands in same line
+        -f - reads the sed commands from file
+        -r/-E - allows extended regular expression
+        -i - in place editing of input file
+        -l N - sets the line length N
+        -s - tells sed to treat multiple files as independent files
+
+DELIMITER
+        's: : :'
+        's| | |'
+        's/ / /'
+        All of the above are equivalent
+
+MATCHED STRING(&)
+        & - represents the matched string
+
+        echo "123 abc" | sed 's/[0-9]+/(&)/'
+        (123) abc
+
+COMMANDS
+        1) /g - Global replacement. Replace all occurances of pattern in line
+        2) /[n] - Replaces the nth occurance of pattern in each line(Default n=1)
+        3) /p - print the modified line.
+        4)  sed 'n p' filename - prints nth line
+                sed 'n,m p' filename - prints lines from n to m
+        5) /w [filename] - Write the modified data into [filename]
+        6) /I - Ignore case while matching pattern
+        7) /d - deletes the matched pattern line
+                sed '/PATTERN/d' filename
+        8) n d - deletes nth line
+                sed 'n d' filename
+        9) n,m d - deletes all lines from n to m
+                sed 'n,m d' filename
+        10) 'n,m s/ / /' - reads only lines from n to m
+                sed 'n,$ s/ / /' filename - $ is a special character which means last line of file
+        11) 'n~m s/ / /' - starts from nth line and after it processes every mth line 
+        12) 'n,+m s/ / /' - starts from nth line and reads till n+m th line        
+
+REVERSING THE RESTRICTION WITH !
+Similar to -v option in grep
+        sed -n '/PATTERN/ !p' - prints line that do not match the pattern
+
+QUIT COMMAND
+        sed 'num q' - quits when it reaches [num]th line
+
+READING A FILE WITH 'r'
+        sed '/PATTERN/ r file' - reads the file after the pattern is matched. If pattern is matched multiple times, it reads file whenever pattern is matched
+
+APPEND A LINE WITH 'a'
+        sed '/PATTERN/ a\[text]' - append the text after the pattern is matched
+
+INSERT A LINE WITH 'i'
+        sed '/PATTERN/ i\[text]' - insert the text before the line on which pattern is matched
+
+CHANGE A LINE WITH 'c'
+        sed '/PATTERN/ c\[text]' - change the matched line to text
+
+PRINT LINE NUMBER WITH '='
+        sed -n '/PATTERN/ =' - prints line number of the line with matched pattern
+
+TRANSFORM A LINE WITH 'y'
+        sed 'y/abc/ABC/' - changes the occurance of 'a to 'A' , 'b' to 'B' , 'c' to 'C'
+
+GROUPING WITH {}
+        The braces are used to group sed commands

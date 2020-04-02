@@ -1,0 +1,63 @@
+\documentclass[OPTIONS]{CLASS}
+
+		OPTIONS : 
+		1-letterpaper,a4paper,legalpaper,a5paper,executivepaper,b5paper
+		2-10pt,11pt,12pt
+		3-onecolumn/twocolumn :1 column / 2 column pages
+		4-oneside/twoside : Print on one side / both sides of paper
+		5-openright/openany : IDetermines if a chapter should start on a right-hand page; default is openright for book, and openany for report
+		6-landscape : Selects landscape format; default is portrait
+		7- draft/final : Mark (draft) or do not mark (final) overfull boxes with a black box in the margin; default is final
+		8-fleqn : Put displayed formulas flush left; default is centered
+		9- leqno : Put equation numbers on the left side of equations; default is the right side
+		10-openbib : Use “open” bibliography format
+		11- titlepage/notitlepage : Specifies whether the title page is separate; default depends on the class
+
+		**OPTION 3,4,5 are not used by slides
+		**Slides class offers the option 'clock' for printing the time at the bottom of each note
+
+		CLASS:
+		1-article
+		2-book
+		3-letter
+		4-report
+		5-slides
+
+	FONT STYLES:
+		1- textrm
+		2- textit
+		3- textmd
+		4- textbf
+		5- textup
+		6- textsl
+		7- textsf
+		8- textsc
+		9- texttt
+		10- textnormal
+
+		FONT FAMILY:
+			1-sffamily
+			2-ttfamily
+			3-rmfamily
+
+		FONT SERIES:
+			1-bfseries
+			2-mdseries
+		
+		FONT SHAPE:
+			1-itshape : italic
+			2-upshape : Upright
+			3-slshape : slanted/oblique
+			4-scshape : small caps
+
+		OTHER COMMANDS:
+			1-bf
+			2-cal
+			3-it
+			4-rm
+			5-sc
+			6-sf
+			7-sl 
+			8-tt
+
+
