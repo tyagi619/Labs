@@ -1,0 +1,30 @@
+PING iitd.ac.in (103.27.9.20) 512(540) bytes of data.
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=1 ttl=49 time=357 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=2 ttl=49 time=261 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=3 ttl=49 time=171 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=4 ttl=49 time=248 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=5 ttl=49 time=158 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=6 ttl=49 time=401 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=7 ttl=49 time=205 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=8 ttl=49 time=418 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=9 ttl=49 time=204 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=10 ttl=49 time=405 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=11 ttl=49 time=219 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=12 ttl=49 time=228 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=13 ttl=49 time=237 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=14 ttl=49 time=431 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=15 ttl=49 time=225 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=16 ttl=49 time=233 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=17 ttl=49 time=417 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=18 ttl=49 time=238 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=19 ttl=49 time=246 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=20 ttl=49 time=254 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=21 ttl=49 time=430 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=22 ttl=49 time=244 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=23 ttl=49 time=253 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=24 ttl=49 time=261 ms
+520 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=25 ttl=49 time=269 ms
+
+--- iitd.ac.in ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 9712ms
+rtt min/avg/max/mdev = 158.285/281.093/431.732/84.444 ms, pipe 2

@@ -1,0 +1,30 @@
+PING iitd.ac.in (103.27.9.20) 1024(1052) bytes of data.
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=1 ttl=49 time=240 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=2 ttl=49 time=291 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=3 ttl=49 time=257 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=4 ttl=49 time=266 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=5 ttl=49 time=275 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=6 ttl=49 time=283 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=7 ttl=49 time=292 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=8 ttl=49 time=300 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=9 ttl=49 time=206 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=10 ttl=49 time=216 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=11 ttl=49 time=326 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=12 ttl=49 time=335 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=13 ttl=49 time=343 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=14 ttl=49 time=351 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=15 ttl=49 time=361 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=16 ttl=49 time=370 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=17 ttl=49 time=380 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=18 ttl=49 time=388 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=19 ttl=49 time=397 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=20 ttl=49 time=408 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=21 ttl=49 time=204 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=22 ttl=49 time=405 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=23 ttl=49 time=219 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=24 ttl=49 time=229 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=25 ttl=49 time=200 ms
+
+--- iitd.ac.in ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 9627ms
+rtt min/avg/max/mdev = 200.964/302.147/408.058/67.961 ms, pipe 2

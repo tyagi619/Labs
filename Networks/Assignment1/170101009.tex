@@ -1,0 +1,315 @@
+\documentclass[12pt]{report}
+
+\usepackage[margin=1in,top=1mm,bottom=12mm,left=10mm,right=10mm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\usepackage{calc}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\begin{document}
+	\newlength{\strutheight}
+	\settoheight{\strutheight}{\strut}
+	\begin{titlepage}
+		\begin{center}
+			\hspace{0pt}
+			\vfill
+			\Huge{\textbf{CS-349\\ \vspace*{10px} NETWORKS LAB}}\\
+			\vspace*{30px}
+			\Huge{\textbf{ASSIGNMENT 1}}\\
+			\vspace*{70px}
+			\Large{\textbf{ANUBHAV TYAGI}}\\
+			\Large{\textbf{170101009}}\\
+			\vspace*{10px}
+			\Large{\textbf{\today}}
+			\vfill
+			\hspace{0pt}
+		\end{center}
+	\end{titlepage}
+	
+	\newpage
+	\vspace*{40px}
+	\setlength{\parindent}{0em}
+	\large{\textbf{Q1. }}
+	\linebreak[1]
+	\normalsize{}
+	\renewcommand{\baselinestretch}{0.2}
+	\begin{enumerate}[label=\textbf{(\alph*)}]
+		\item \textbf{-c} is the option used to specify the number of echo requests to send with \textit{ping} command.\\* \textbf{Command : ping -c [number] $\boldsymbol{\langle}$host\_address$\boldsymbol{\rangle}$}
+		\item \textbf{-i} is the option required to set time interval (in seconds), rather than the default one second interval, between two successive \textit{ping} ECHO\_REQUESTs.\\* \textbf{Command : ping -i [number] $\boldsymbol{\langle}$host\_address$\boldsymbol{\rangle}$}
+		\item \textbf{-l} is the option to send ECHO\_REQUEST packets one after another without waiting for a reply. For a normal user, the limit for sending such ECHO\_REQUEST packets is \textbf{3}.\\* \textbf{Command : ping -l [number] $\boldsymbol{\langle}$host\_address$\boldsymbol{\rangle}$}
+		\item \textbf{-s} is the option used to specify the ECHO\_REQUEST packet size (in bytes).\\*
+		If the packet size is set to 32 bytes, then the total packet size will be \textbf{60 bytes} [ 32 bytes (Packet Size) + 8 bytes (ICMP Header Size) + 20 bytes (IP Header)].
+		\\* \textbf{Command : ping -s [size] $\boldsymbol{\langle}$host\_address$\boldsymbol{\rangle}$}
+	\end{enumerate}
+	
+	\vspace*{0px}
+	\large{\textbf{Q2.}}\\
+	\linebreak[1]
+	\normalsize{}
+	\hspace*{1cm}The following readings were recorded at 0830 hrs, 1400 hrs and 1930 hrs\\[2pt]
+	\begin{center}
+	\begin{tabular}{| c | c | c | c | c | c | c |}
+		\hline
+		& & & & & &\\[1pt]
+		Destination & IP Address & Location & Avg RTT & Avg RTT & Avg RTT & Overall Avg\\[1pt]
+		Host Address & & & (0830 hrs) & (1400 hrs) & (1930 hrs) & RTT \\[1pt]
+		 & & & (ms) & (ms) & (ms) & (ms) \\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		ox.ac.uk & 129.67.242.155 & England & 453.642 & 500.076 & 421.678 & 458.465\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		msu.ru & 188.44.50.103 & Russia & 512.777 & 548.614 & 464.168 & 508.519\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		iitd.ac.in & 103.27.9.20 & India & 160.733 & 196.008 & 287.318 & 214.686\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		harvard.edu & 23.185.0.1 & USA & 293.223 & 227.001 & 237.512 & 252.578\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		sydney.edu.au & 129.78.5.8 & Australia & 530.681 & 463.465 & 399.720 & 464.622\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		www.tsinghua.edu.cn & 166.111.4.100 & China & 753.655 & 715.697 & 626.862 & 698.738\\[1pt]
+		\hline
+	\end{tabular}
+	\\[10pt]
+	\end{center}
+	\hspace*{1cm} \textbf{Packet loss} was observed to be 0\% in all cases. However congestion and high traffic in the network may result in packet loss.\\[1pt]
+	\hspace*{1cm} \textbf{RTT v/s Distance :} From the above table, we can conclude that there exists a \textbf{weak positive correlation} between geographical distance and RTT due to factors such as number of hops, propagation delay. Larger the distance, generally more are the number of routers the packet has to pass through and hence greater the processing delay.\\[1pt]
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.25]{location}
+		\caption{RTT vs Distance}
+	\end{figure}
+	\pagebreak
+	\vspace*{10px}
+	\hspace*{1cm}The following experiment was carried by pinging \textbf{iitg.ac.in}\\[2pt]
+	\begin{center}
+	\begin{tabular}{| c | c | c | c | c | c | c |}
+		\hline
+		& & & & & &\\[1pt]
+		Size (in bytes) & 64 & 128 & 256 & 512 & 1024 & 2048\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		Avg RTT (0830 hrs) (ms) & 0.430 & 0.591 & 0.470 & 0.601 & 0.741 & 0.883\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		Avg RTT (1400 hrs) (ms) & 0.399 & 0.422 & 0.483 & 0.594 & 0.786 & 0.910\\[1pt]
+		\hline
+		& & & & & &\\[1pt]
+		Avg RTT (1930 hrs) (ms) & 0.368 & 0.459 & 0.454 & 0.518 & 0.700 & 0.817\\[1pt]
+		\hline
+	\end{tabular}
+	\\[10pt]
+	\end{center}
+	\hspace*{1cm} \textbf{RTT v/s Size :} From the above table, we can conclude that there exists a \textbf{positive correlation} between packet size and RTT. This is because larger the packet size, greater is the transmission delay. Also there is not much difference in RTT upto 1024 bytes because mtu (Maximum Transfer Unit) is 1500 bytes. Any packet greater than mtu gets split into multiple packets and hence have greater RTT.	\\[1pt]
+	\hspace*{1cm} \textbf{RTT v/s Time of Day :} From the above tables, we can conclude that RTT is realted to time of day. RTT is observed to be higher when there is congestion and high traffic in the network. Hence RTT is higher during peak hours od the day.\\[1pt]
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.3]{size1}
+		\caption{RTT vs Packet Size}
+	\end{figure}
+
+	\vspace*{10px}
+	\large{\textbf{Q3.}}
+	\linebreak[1]
+	\normalsize{}
+	
+	\begin{enumerate}[label=\textbf{(\alph*)}]
+		\item IP Address : \textbf{172.17.0.23} \hspace{10mm}  Domain Name : \textbf{iitg.ernet.in}\\[0.5pt]
+		\begin{center}
+		\begin{tabular}{| c | c | c | c |}
+			\hline
+			&&&\\[2pt]
+			Command & Packets Transmitted & Packets Recieved & Packet Loss Rate\\[2pt]
+			\hline
+			&&&\\[2pt]
+			ping -c 1000 -n 172.17.0.23 & 1000 & 1000 & 0\% \\[2pt]
+			\hline
+			&&&\\[2pt]
+			ping -c 1000 -p ff00 172.17.0.23 & 1000 & 1000 & 0\% \\[2pt]
+			\hline
+			
+		\end{tabular}
+		\\[10pt]
+		\end{center}
+		\vspace*{2cm}
+		\item \textbf{}\\
+		\begin{center}
+			\begin{tabular}{| c | c | c | c | c |}
+				\hline
+				&&&&\\[2pt]
+				Command & Maximum & Minimum & Mean & Median \\
+				&Latency (ms)&Latency (ms)&Latency (ms)&Latency (ms)\\[2pt]
+				\hline
+				&&&&\\[2pt]
+				ping -c 1000 -n 172.17.0.23 & 3.550 & 0.172 & 0.383 & 0.357 \\[2pt]
+				\hline
+				&&&&\\[2pt]
+				ping -c 1000 -p ff00 172.17.0.23 & 3.100 & 0.194 & 0.389 & 0.353 \\[2pt]
+				\hline	
+			\end{tabular}
+		\end{center}
+		\pagebreak
+		\vspace*{10px}
+		\item The distribution for both the curves resemble \textbf{Normal Distribution}\\[1mm]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\textwidth,height=0.4\textwidth]{Figure_1}
+			\caption{ping -c 1000 -n 172.17.0.23}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\textwidth,height=0.4\textwidth]{Figure_2}
+			\caption{ping -c 1000 -p ff00 172.17.0.23}
+		\end{figure}
+		\item The two scenarios set up to be very similar except two aspects. First is that \textbf{mean latency} in case of \textbf{ping -n} is smaller than that in case of \textbf{ping -p ff00}. This is because in case of \textbf{ping -n} no attempt will be made to lookup symbolic names for host addresses. Hence it saves a DNS query to translate domain name to an IP address. Second is that \textbf{packet loss rate} in case of \textbf{ping -p ff00} will be higher than that in case of \textbf{ping -n}. This is because \textit{ping -p ff00} will fill the packet with \textit{1111111100000000}. Since there is only one transition present (from 1 to 0), the clocks are more likely to go out of synchronisation and hence justifies for greater packet loss. 
+	\end{enumerate}
+	
+	\vspace*{10px}
+	\large{\textbf{Q4.}}
+	\linebreak[1]
+	\normalsize{}
+	\begin{enumerate}[label=\textbf{(\alph*)}]
+		\item \textbf{} Ifconfig  is  used to configure the kernel-resident network interfaces. It is used at boot time to set up interfaces as necessary.  After that,it  is  usually  only  needed  when  debugging or when system tuning is needed. \\[1pt]
+		\pagebreak
+		\vspace*{10px}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth,height=0.3\textwidth]{ifconfig}
+			\caption{ifconfig Output}
+		\end{figure}
+		\textbf{enp2s0 (ethernet interface) and lo (loopback interface)} are the interface names.\textbf{flags} displays the status of the interface, including any flags currently associated with the interface. \textbf{BROADCAST} indicates that the interface supports IPv4 broadcasts. \textbf{RUNNING} indicates that the system is transmitting packets through the interface. \textbf{MULTICAST} shows that the interface supports multicast transmissions. \textbf{mtu 1500} shows that the interface has a maximum transfer size of 1500 octets. \textbf{inet and inet6} displays the IPv4 and IPv6 address that is assigned to the interface respectively. \textbf{netmask} displays the IPv4 netmask of the interface. \textbf{broadcast} denotes the broadcast address. \textbf{ether} shows the interface's ethernet layer address (or MAC Address). \textbf{txqueuelen} denotes the length of the transmit queue for the device. \textbf{RX Packets and TX Packets} show the total number of packets transmitted and recieved respectively.\textbf{RX bytes and TX bytes} indicate the total amount of data that has passed ethernet interface either way. \textbf{collisions} indicates if the packets are colliding while traversing the network (Value greater than 0 indicate packets are colliding).
+		
+		\item \textbf{-a} displays all the interfaces which are currently available, even if they are down. \textbf{up} causes the driver for the interface to be activated. \textbf{down} causes the driver for the interface to be shut down. \textbf{mtu N} sets the Maximum Transfer Unit (MTU) of an interface to N octets. \textbf{add addr/prefixlen} adds IPv6 addres to an interface. 
+		 
+		\item \textbf{} Route  is  used to show/manipulate routing table. \\[1pt]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\textwidth,height=0.07\textwidth]{route}
+			\caption{route Output}
+		\end{figure}
+		\textbf{Destination} shows the destination network or destination host. \textbf{Gateway} shows the gateway address or '*' if none is set. \textbf{Genmask} shows the netmask for the destination net; '255.255.255.255' for a host destination and '0.0.0.0' for the default route. Possible \textbf{flags} include: \textbf{U} (route is up), \textbf{H} (target is a host), \textbf{G} (use gateway), \textbf{R} (reinstate route for dynamic routing), \textbf{D} (dynamically installed by daemon or redirect), \textbf{M} (modified from routing daemon or redirect), \textbf{A} (installed by addrconf), \textbf{C} (cache entry),\textbf{!} (reject route). \textbf{Metric} shows the distance to the target (counted in hops). \textbf{Ref} indicates the number of references to this route. \textbf{Use} displays count of number of lookups for the route. \textbf{Iface} shows the interface to which packets for this route will be sent.	
+		\item \textbf{-n} shows numerical addresses instead of trying to determine symbolic host names. \textbf{-C} lists the kernel's routing cache information. \textbf{-F} lists the kernel's FIB (Forwarding Information Base) routing table. \textbf{-A \underline{family}} uses the specified address family (eg: inet). 	
+	\end{enumerate}
+	\pagebreak
+	\vspace*{10px}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth,height=0.1\textwidth]{route1}
+		\caption{Various route options}
+	\end{figure}
+	
+	\vspace*{10px}
+	\large{\textbf{Q5.}}
+	\linebreak[1]
+	\normalsize{}
+	\begin{enumerate}[label=\textbf{(\alph*)}]
+		\item \textbf{Netstat} prints information about the Linux networking subsystem including network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+		
+		\item \textit{netstat} \textbf{-at} is used to show all established TCP connections.\\[1pt]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.5\textwidth,height=0.3\textwidth]{netstat_at}
+			\caption{netstat -at Output}
+		\end{figure}
+		The fields of the output are as follows: \textbf{Proto} tells the protocol used by the socket, \textbf{Recv-Q}, in case of \textit{ESTABLISHED Socket} shows the count of bytes not copied by the user program connected to this socket and in case of \textit{LISTENING Socket} contains the current syn backlog, \textbf{SEND-Q} in case of \textit{ESTABLISHED Socket} shows the count of bytes not acknowledged by the remote host and in case of \textit{LISTENING Socket} contains the maximum size of the syn backlog,\textbf{Local Address} shows the address and port number of the local end of the socket, \textbf{Foreign Address} shows the address and port number of the remote end of the socket, \textbf{State} shows the status of the socket (Eg: LISTEN, ESTABLISHED, CLOSE, UNKNOWN, SYN\_SET, SYN\_RECV, FIN\_WAIT1, FIN\_WAIT2, TIME\_WAIT, CLOSE\_WAIT, LAST\_ACK, CLOSING).
+	
+		\item \textbf{netstart -r} shows the \textbf{kernal routing table}.The fields of the output are as follows:\\[1pt] \textbf{Destination} shows the destination network or destination host. \textbf{Gateway} shows the gateway address or '*' if none is set. \textbf{Genmask} shows the netmask for the destination net. Possible \textbf{flags} include: \textbf{U} (route is up), \textbf{H} (target is a host), \textbf{G} (use gateway), \textbf{R} (reinstate route for dynamic routing), \textbf{D} (dynamically installed by daemon or redirect), \textbf{M} (modified from routing daemon or redirect), \textbf{A} (installed by addrconf), \textbf{C} (cache entry),\textbf{!} (reject route). \textbf{Metric} shows the distance to the target (counted in hops). \textbf{Ref} indicates the number of references to this route. \textbf{Use} displays count of number of lookups for the route. \textbf{Iface} shows the interface to which packets for this route will be sent. \textbf{MSS} shows default maximum segment size for TCP connections over this route. \textbf{Window} shows default window size for TCP connections over this route. \textbf{irtt} shows initial round trip time.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\textwidth,height=0.07\textwidth]{netstat_r}
+			\caption{netstat -r output}
+		\end{figure}
+		\pagebreak
+		\vspace*{10px}
+		\item \textbf{-i} option of \textit{netstat} is used to display the status of all network interfaces. The number of network interfaces on my computer is \textbf{3} (enp2s0 (Ethernet), lo (loopback), wlp3s0 (wireless lan)).
+		
+		\item \textbf{-su} is used to show statistics of all UDP connections.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.3]{netstat_su}
+			\caption{netstat -su Output}
+		\end{figure}
+		
+		\item The loopback device is a special, virtual network interface that your computer uses to communicate with itself. It is used mainly for diagnostics and troubleshooting, and to connect to servers running on the local machine.
+	\end{enumerate}
+	
+	\vspace*{10px}
+	\large{\textbf{Q6.}}\\
+	\linebreak[1]
+	\normalsize{}
+	\hspace*{1cm} \textbf{Traceroute} tracks the route packets taken from an IP network on their way to a given host.
+	\begin{enumerate}[label=\textbf{(\alph*)}]
+		\item The following readings were recorded at 0830 hrs, 1400 hrs and 1730 hrs.
+		\begin{center}
+			\begin{tabular}{| c | c | c | c | c | c | c |}
+				\hline
+				&&&&&&\\[1pt]
+				& ox.ac.uk & msu.ru & iitd.ac.in & harvard.edu & sydney.edu.au & tsinghua.edu.cn\\[1pt]
+				\hline
+				&&&&&&\\[1pt]
+				Hop Count (0830 hrs) & 32 & 26 & 22 & 12 & 19 & 33 \\[1pt]
+				\hline
+				&&&&&&\\[1pt]
+				Hop Count (1400 hrs) & 32 & 26 & 22 & 12 & 19 & 33 \\[1pt]
+				\hline
+				&&&&&&\\[1pt]
+				Hop Count (1930 hrs) & 32 & 26 & 22 & 12 & 19 & 33 \\[1pt]
+				\hline
+			\end{tabular}
+		\\[5pt]
+		\end{center}
+	
+	The common hops among all traceroute found are - \textbf{192.168.43.234} and \textbf{172.25.11.85}. \textbf{10.72.163.19} and \textbf{172.16.85.235} are same for msu.ru and harvard.edu. \textbf{10.72.163.18} is same for  ox.ac.uk and sydney.edu.au. \textbf{172.16.85.229} is same for sydney.edu.au and iitd.ac.in.
+	\textbf{103.198.140.54} is same for msu.ru and www.tsinghua.edu.cn.
+	
+	\item The route to the host changes at different times of the day because the packets are redirected at nodes to take a route having less congestion or traffic. Since \textbf{congestion} in a network varies at different times of the day, the packet is routed to different paths in the network. Also failure in one part of network may result in different route to host.
+	
+	\item  \textit{Traceroute} may not find complete path to some hosts in the following cases: ICPM reply by intermediate host may be lost, destination host may not send ICPM reply or accept ICPM packet, and either destination host or sender may not be connected to the network.
+	\item It is possible to find partial intermediate path using \textit{traceroute} even if \textit{ping} fails. This is because in case of \textit{ping} intermediate hosts only forward ICPM packets to destination host, and only destination host replies on recieving packet. Whereas in case of \textit{traceroute} each intermediate host responds with an ICPM packet. So even if destination host is not accepting ICPM packets (or not replying), a partial path can be found.
+	\end{enumerate}
+	\pagebreak
+	\vspace*{10px}
+	\large{\textbf{Q7.}}
+	\linebreak[1]
+	\normalsize{}
+	\begin{enumerate}[label=\textbf{(\alph*)}]
+		\item \textbf{arp} is the command used to show full ARP Table for a machine. The following are the columns of ARP Table: \textbf{Address} lists the IPv4 address of network neighbour, \textbf{HWtype} shows the type of hardware device (like ethernet), \textbf{HWaddress} lists MAC address for the corresponding IPv4 address, \textbf{Iface} shows the interface name, \textbf{Mask} displays the netmask and \textbf{flags} show the status of each entry( C (Complete), M (Permanent), P (Published)).
+
+		\item Adding or deleteing entries from ARP Table require sudo (root) access. \textbf{arp -s \underline{IP Address} \underline{MAC\_address}} is used to add entry to ARP Table. \textbf{arp -d \underline{IP Address}} is used to delete entry from ARP Table.
+		 \begin{figure}[H]
+		 	\centering
+		 	\includegraphics[scale=0.3]{arp_s}
+		 	\caption{Adding entry to ARP Table}
+		 \end{figure}
+	 
+	 	\item The entries in the cache of the ARP module of the kernel remain valid for \textbf{60 seconds}.This can be observed from \textbf{cat /proc/sys/net/ipv4/neigh/default/gc\_stale\_time}. A \textit{trial and error} method to discover the timeout values for the ARP cache entries is to add a temporary entry to ARP Table and check for the presence of entry in table after fixed intervals(say 6 seconds). The time at which entry disappears from the ARP Table is the cache timeout.
+	 	
+	 	\item  If two IP addresses map to same Ethernet address then 100\% packet loss will be observed when either of the IP address is pinged. 
+	 	To communicate with machines on the same subnet range, MAC address is used for sending the packages. In the ARP table ,the IP’s of devices of other subnet ranges have the ethernet address of the router that connects those two subnets, ARP tables is referred and then packets are sent to the router which then uses its own routing table to send to the packet to destination device.
+	\end{enumerate}
+	
+	\vspace*{10px}
+	\large{\textbf{Q8.}}
+	\linebreak[1]
+	\normalsize{}
+	\\
+	\hspace*{1cm}The command used was \textbf{nmap -n -sP 10.19.4.0/22}. The hostel chosen for the experiment was \textbf{Lohit}.\\[1pt] \hspace*{1cm}\textbf{Maximum} number of hosts were active around \textbf{2330 hours} and \textbf{minimum} number of hosts were\\[1pt] \hspace*{1cm} active around \textbf{0530 hours}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.3]{nmap}
+		\caption{Number of active hosts using nmap}
+	\end{figure}
+\end{document}

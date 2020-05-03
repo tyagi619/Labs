@@ -1,0 +1,5 @@
+PING iitd.ac.in (103.27.9.20) 2048(2076) bytes of data.
+
+--- iitd.ac.in ping statistics ---
+25 packets transmitted, 0 received, 100% packet loss, time 24578ms
+

@@ -1,0 +1,94 @@
+\documentclass[12pt]{report}
+
+\usepackage[margin=1in,top=0mm,bottom=12mm,left=10mm,right=10mm]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\usepackage{calc}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+\begin{document}
+	\newlength{\strutheight}
+	\settoheight{\strutheight}{\strut}
+	\begin{titlepage}
+		\begin{center}
+			\hspace{0pt}
+			\vfill
+			\Huge{\textbf{CS-348\\ \vspace*{10px} COMPUTER NETWORKS}}\\
+			\vspace*{30px}
+			\Huge{\textbf{ASSIGNMENT 1}}\\
+			\vspace*{70px}
+			\Large{\textbf{ANUBHAV TYAGI}}\\
+			\Large{\textbf{170101009}}\\
+			\vspace*{10px}
+			\Large{\textbf{\today}}
+			\vfill
+			\hspace{0pt}
+			\vfill
+		\end{center}
+	\end{titlepage}
+	\vspace*{10px}
+	\setlength{\parindent}{0em}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{graph}
+	\end{figure}
+	\large{}
+	\vspace*{0px}
+	\hspace*{15px} \textbf{Roll No. : 170101009} \hspace*{50px} \textbf{a = 1} \textbf{,} \textbf{b = 9} \hfill\\[7pt]
+	\hspace*{15px} \textbf{Source Node : x}\\
+	\normalsize
+	\begin{center}
+		\begin{tabular}{| p{1cm} | c | c | c | c | c | c | c |}
+			\hline
+			&&&&&&& \\
+			\textbf{Step} & \textbf{N'} & \textbf{D(t),p(t)} & \textbf{D(u),p(u)} & \textbf{D(v),p(v)} & \textbf{D(w),p(w)} & \textbf{D(y),p(y)} & \textbf{D(z),p(z)} \\
+			&&&&&&& \\
+			
+			\hline
+			&&&&&&&\\[1pt]
+			\textbf{0} & \textbf{x} & \textbf{$\infty$} & \textbf{$\infty$} & \textbf{1,x} & \textbf{7,x} & \textbf{6,x} & \textbf{8,x}\\
+			&&&&&&& \\[1pt]
+			\hline
+			
+			&&&&&&& \\[1pt]
+			\textbf{1} & \textbf{vx} & \textbf{10,v} & \textbf{7,v} & & \textbf{2,v} & \textbf{6,x} & \textbf{8,x}\\
+			&&&&&&& \\[1pt]
+			\hline
+			
+			&&&&&&& \\[1pt]
+			\textbf{2} & \textbf{vwx} & \textbf{10,v} & \textbf{5,w} & & & \textbf{6,x} & \textbf{8,x} \\
+			&&&&&&& \\[1pt]
+			\hline
+			
+			&&&&&&& \\[1pt]
+			\textbf{3} & \textbf{uvwx} & \textbf{7,u} & & & & \textbf{6,x} & \textbf{8,x} \\
+			&&&&&&& \\[1pt]
+			\hline
+			
+			&&&&&&& \\[1pt]
+			\textbf{4} & \textbf{uvwxy} & \textbf{7,u} & & & & & \textbf{7,y}\\
+			&&&&&&& \\[1pt]
+			\hline
+			
+			&&&&&&& \\[1pt]
+			\textbf{5} & \textbf{tuvwxy} & & & & & & \textbf{7,y}\\
+			&&&&&&& \\[1pt]
+			\hline
+			&&&&&&& \\[1pt]
+			\textbf{6} & \textbf{tuvwxyz} & & & & & &\\
+			&&&&&&& \\[1pt]
+			\hline
+		\end{tabular}
+		\\[10pt]
+	\end{center}
+	
+\end{document}	

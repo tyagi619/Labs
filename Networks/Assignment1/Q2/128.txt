@@ -1,0 +1,30 @@
+PING iitd.ac.in (103.27.9.20) 128(156) bytes of data.
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=1 ttl=49 time=333 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=2 ttl=49 time=151 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=3 ttl=49 time=102 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=4 ttl=49 time=87.1 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=5 ttl=49 time=100 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=6 ttl=49 time=238 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=7 ttl=49 time=261 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=8 ttl=49 time=94.3 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=9 ttl=49 time=88.7 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=10 ttl=49 time=326 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=11 ttl=49 time=143 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=12 ttl=49 time=166 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=13 ttl=49 time=94.6 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=14 ttl=49 time=104 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=15 ttl=49 time=232 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=16 ttl=49 time=152 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=17 ttl=49 time=173 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=18 ttl=49 time=85.0 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=19 ttl=49 time=319 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=20 ttl=49 time=101 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=21 ttl=49 time=160 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=22 ttl=49 time=183 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=23 ttl=49 time=204 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=24 ttl=49 time=227 ms
+136 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=25 ttl=49 time=146 ms
+
+--- iitd.ac.in ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24037ms
+rtt min/avg/max/mdev = 85.028/171.285/333.527/76.867 ms

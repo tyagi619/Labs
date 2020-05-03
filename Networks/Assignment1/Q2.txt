@@ -1,0 +1,30 @@
+www.ox.ac.uk 		England
+www.msu.ru			Russia
+iitd.ac.in			India
+www.harvard.edu		USA
+sydney.edu.au		Australia
+www.tsinghua.edu.cn China
+
+8:30 am
+1	rtt min/avg/max/mdev = 261.888/453.642/648.707/113.301 ms  0%
+2	rtt min/avg/max/mdev = 258.980/512.777/706.028/135.050 ms  0%
+3	rtt min/avg/max/mdev = 83.386/160.733/334.308/72.919  ms   0%
+4	rtt min/avg/max/mdev = 84.637/293.223/1045.248/284.321 ms  0%
+5	rtt min/avg/max/mdev = 293.024/530.681/1019.853/137.622 ms 0%
+6	rtt min/avg/max/mdev = 462.329/753.655/1522.819/246.489 ms 0%
+
+15:30
+1	rtt min/avg/max/mdev = 269.746/500.076/733.819/131.027 ms 0%
+2	rtt min/avg/max/mdev = 340.611/548.614/861.644/116.353 ms 0%
+3	rtt min/avg/max/mdev = 83.976/196.008/436.884/95.510 ms   0%
+4	rtt min/avg/max/mdev = 98.960/227.001/400.167/82.406 ms   0%
+5	rtt min/avg/max/mdev = 262.014/463.465/738.217/122.833 ms 0%
+6	rtt min/avg/max/mdev = 480.894/715.697/923.471/123.078 ms 0%
+
+17:30
+1	rtt min/avg/max/mdev = 280.295/421.678/728.877/100.087 ms
+2	rtt min/avg/max/mdev = 311.209/464.168/663.699/94.379 ms
+3	rtt min/avg/max/mdev = 165.346/287.318/430.834/87.826 ms
+4	rtt min/avg/max/mdev = 115.262/237.512/415.104/83.109 ms
+5	rtt min/avg/max/mdev = 243.925/399.720/613.553/75.466 ms
+6	rtt min/avg/max/mdev = 490.626/626.862/829.943/99.286 ms

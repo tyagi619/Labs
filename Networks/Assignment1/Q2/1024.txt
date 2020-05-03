@@ -1,0 +1,30 @@
+PING iitd.ac.in (103.27.9.20) 1024(1052) bytes of data.
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=1 ttl=49 time=92.3 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=2 ttl=49 time=175 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=3 ttl=49 time=96.0 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=4 ttl=49 time=321 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=5 ttl=49 time=241 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=6 ttl=49 time=151 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=7 ttl=49 time=183 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=8 ttl=49 time=206 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=9 ttl=49 time=228 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=10 ttl=49 time=251 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=11 ttl=49 time=170 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=12 ttl=49 time=295 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=13 ttl=49 time=318 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=14 ttl=49 time=340 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=15 ttl=49 time=96.6 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=16 ttl=49 time=96.9 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=17 ttl=49 time=203 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=18 ttl=49 time=226 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=19 ttl=49 time=147 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=20 ttl=49 time=272 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=21 ttl=49 time=295 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=22 ttl=49 time=318 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=23 ttl=49 time=341 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=24 ttl=49 time=363 ms
+1032 bytes from 103.27.9.20 (103.27.9.20): icmp_seq=25 ttl=49 time=181 ms
+
+--- iitd.ac.in ping statistics ---
+25 packets transmitted, 25 received, 0% packet loss, time 24035ms
+rtt min/avg/max/mdev = 92.320/224.652/363.206/83.427 ms
