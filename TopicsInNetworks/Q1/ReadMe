@@ -1,0 +1,13 @@
+To compile : g++ -o routing routing.cpp
+To run : 
+	1 - ./routing -top top14.txt -conn NSFNET_100.txt -rt routingtablefile.txt -ft forwardingtablefile.txt -path pathsfile.txt -flag 0 -p 0
+
+	2 - ./routing -top top24.txt -conn ARPANET_100.txt -rt routingtablefile.txt -ft forwardingtablefile.txt -path pathsfile.txt -flag 0 -p 0
+
+
+Parameters: 
+	-flag : 0 -> consider hopdistance
+			1 -> consider distance cost metric from input file
+
+	-p    : 0 -> Optimistic Approach
+			1 -> Pessimistic Approach
